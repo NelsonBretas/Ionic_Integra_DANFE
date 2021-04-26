@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Integra XML</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+  <h2 text-center color="base">Importação de XML</h2>
+  <img src="../../assets/imgs/logoapl.png">
+  <br><br>
+
+  <ion-card color="base">
+
+      <ion-card-header text-center>
+        Recebimento de Mercadorias
+      </ion-card-header>
+    
+      <ion-card-content>
+          <button ion-button block color="info" (click)="abreDigita()">Digitar chave da Nota</button>
+          <br>
+          <button ion-button block color="info" (click)="abreScan()">Escanear Chave da Nota</button>
+          <br>        
+      </ion-card-content>
+    
+  </ion-card>
+  <br>
+  <ion-card color="base">
+
+      <ion-card-header text-center>
+        Produtos/Serviços
+      </ion-card-header>
+    
+      <ion-card-content>
+          <button ion-button block color="info" (click)="abreProdutos()">Gerenciar Produtos</button>
+          <br>
+          <button ion-button block color="info" (click)="abreCompl()">Produto x Fornecedor</button>
+          <br>        
+      </ion-card-content>
+    
+  </ion-card>  
+  <br>
+  <ion-card color="base">
+
+      <ion-card-header text-center>
+        Fornecedores/Clientes
+      </ion-card-header>
+    
+      <ion-card-content>
+          <button ion-button block color="info" (click)="abreForn()">Gerenciar Fornecedores</button>
+          <br>
+          <button ion-button block color="info">Gerenciar Clientes</button>
+          <br>        
+      </ion-card-content>
+    
+  </ion-card>    
+
+
+</ion-content>

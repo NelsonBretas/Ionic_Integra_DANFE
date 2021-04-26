@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Inclusão de Prod x Fornecedores</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="close()">
+          <ion-icon name="close">
+          </ion-icon>
+        </button>
+      </ion-buttons>          
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-card color="base">
+
+
+      
+        <ion-card-content>
+    
+            <span>Meu Produto</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="codprod" type="text"></ion-input>
+            </ion-item>      
+            <br>      
+            
+            <span>Produto do Fornecedor</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="prodfor" type="text"></ion-input>
+            </ion-item>      
+            <br>                  
+    
+        </ion-card-content>
+      
+      </ion-card>
+      <br>
+    
+      <button ion-button block color="info" (click)="incCompl()">Cadastrar</button>    
+
+</ion-content>

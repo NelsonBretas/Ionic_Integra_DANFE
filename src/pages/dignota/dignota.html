@@ -1,0 +1,36 @@
+<!--
+  Generated template for the DignotaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Importação de Nota Fiscal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card color="base">
+
+    <ion-card-header>
+      <ion-card-title text-center>
+
+        <span>Digite abaixo a chave</span>          
+        
+      </ion-card-title>        
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+          <ion-input placeholder="Digite aqui"  type="number"></ion-input>
+      </ion-item>
+        
+        <br>
+        <button ion-button block color="info" (click)="abreScan()">Importar Nota para o Sistema</button>
+    </ion-card-content>
+
+</ion-card> 
+
+</ion-content>

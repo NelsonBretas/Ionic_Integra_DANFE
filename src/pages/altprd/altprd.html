@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-navbar color="base">
+      <ion-title>Alterar Produto {{this.codprod}}</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="close()">
+            <ion-icon name="close">
+            </ion-icon>
+          </button>
+        </ion-buttons>          
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+        <ion-content>
+  
+            <ion-item>
+              <ion-label stacked>Descrição</ion-label>
+              <ion-input type="text" value="{{this.descprod}}" [(ngModel)]="descprod"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label stacked>Armazém</ion-label>
+              <ion-input type="text" value="{{this.armazem}}" [(ngModel)]="armazem"></ion-input>
+            </ion-item>            
+            
+            <ion-item>
+              <ion-label stacked>NCM</ion-label>
+              <ion-input type="text" [(ngModel)]="ncm" value="{{this.ncm}}"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label stacked>Tipo</ion-label>
+              <ion-input placeholder="" (click)="showTipo()" readonly [(ngModel)]="tipo" type="text"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label stacked>Unidade</ion-label>
+              <ion-input placeholder="" (click)="showUnidade()" readonly [(ngModel)]="unidade" type="text"></ion-input>
+            </ion-item>    
+        
+            <ion-item>
+              <ion-label stacked>Conta Contábil</ion-label>
+              <ion-input type="text" [(ngModel)]="conta" value="{{this.conta}}"></ion-input>
+            </ion-item>    
+        
+            <ion-item>
+              <ion-label stacked>Centro de Custo</ion-label>
+              <ion-input type="text" [(ngModel)]="cc" value="{{this.cc}}"></ion-input>
+            </ion-item>        
+        
+            <ion-item>
+              <ion-label stacked>Origem</ion-label>
+              <ion-input type="text" [(ngModel)]="origem" value="{{this.origem}}"></ion-input>
+            </ion-item>    
+        
+            <ion-item>
+              <ion-label stacked>Grupo</ion-label>
+              <ion-input type="text" [(ngModel)]="grupo" value="{{this.grupo}}"></ion-input>
+            </ion-item>           
+                   
+          </ion-content>
+
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="base">
+      <button ion-button block color="info" (click)="altProd()" >Alterar Produto</button>
+    </ion-toolbar>
+  </ion-footer>
+  

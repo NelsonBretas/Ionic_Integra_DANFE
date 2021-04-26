@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Listagem de Amarrações</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+  
+    <div style="text-align:center; background-color:#2a89a8; color:white; font-size: 100%;" >
+        <br>
+        <span color="info">{{this.nome}}</span>
+        <br><br>
+    </div>
+    <br>
+    <ion-searchbar placeholder="Buscar Código do Produto" [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar>
+    <br>
+    <ion-list>
+      
+        <ion-item *ngFor="let fornecedores of lista_fornecedores" >
+          
+          <ion-thumbnail item-start>
+            <img src="{{this.imagem+fornecedores.tipo}}">
+          </ion-thumbnail>
+          <h2>{{fornecedores.codigo}}</h2>
+          <p>{{fornecedores.descricao}}</p>
+          <p style="color: #2a89a8;">{{fornecedores.prodfor}}</p>
+          <button ion-button clear item-end (click)="getDados(fornecedores.recno)">Consultar</button>
+
+        </ion-item>
+      </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="base">
+    <button ion-button block color="info" (click)="abreInc()" >Incluir Amarração</button>
+  </ion-toolbar>
+</ion-footer>

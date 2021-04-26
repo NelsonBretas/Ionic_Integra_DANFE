@@ -1,0 +1,17 @@
+{
+  "name": "Integra",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "71e8b2f1",
+  "proxies": [
+    {
+    "path" : "/restAdvpl",
+    "proxyUrl"  : "http://localhost:8050/REST/"
+    },
+    {
+      "path" : "/receitaWs",
+      "proxyUrl": "https://www.receitaws.com.br/"
+    }]
+}

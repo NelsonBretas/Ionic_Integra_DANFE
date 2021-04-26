@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Consulta de Fornecedor</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card color="base">
+
+    <ion-card-header text-center>
+      <span>
+        <button ion-button block color="info" (click)="showRadio()">Consulta do Fornecedor</button>
+      </span>
+    </ion-card-header>
+  
+    <ion-card-content>
+
+        <ion-item>
+          <ion-input placeholder="Digite aqui sua consulta" [(ngModel)]="getponteiro" type="text"></ion-input>
+        </ion-item>      
+        <br>        
+
+          <span>
+            Pesquisa por: {{this.pesquisa}}
+          </span>
+
+    </ion-card-content>
+  
+  </ion-card>
+  <br>
+
+  <button ion-button block color="info" (click)="abreResults()">Buscar</button>  
+  <br>
+  <button ion-button block color="secondary" (click)="abreInc()">Incluir</button>  
+
+</ion-content>

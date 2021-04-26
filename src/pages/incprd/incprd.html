@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Inclusão de Produtos</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="close()">
+          <ion-icon name="close">
+          </ion-icon>
+        </button>
+      </ion-buttons>          
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-card color="base">
+
+
+      
+        <ion-card-content>
+    
+            <span>Codigo</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="codprod" type="text"></ion-input>
+            </ion-item>      
+            <br>      
+            
+            <span>Descrição</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="descricao" type="text"></ion-input>
+            </ion-item>      
+            <br>                  
+
+            <span>Tipo</span>
+            <ion-item>               
+                <ion-input placeholder="" (click)="showTipo()" readonly [(ngModel)]="tipo" type="text"></ion-input>
+            </ion-item>      
+            <br>                  
+
+            <span>Unidade de Medida</span>
+            <ion-item>               
+                <ion-input placeholder="" (click)="showUnidade()" readonly [(ngModel)]="unidade" type="text"></ion-input>
+            </ion-item>      
+            <br>    
+            
+            <span>Local Padrão</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="armazem" type="text"></ion-input>
+            </ion-item>      
+            <br>       
+            
+            <span>NCM</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="ncm" type="text"></ion-input>
+            </ion-item>      
+            <br>             
+
+            <span>Origem</span>
+            <ion-item>              
+              <ion-input placeholder="" [(ngModel)]="origem" type="number"></ion-input>
+            </ion-item>      
+            <br>             
+
+    
+        </ion-card-content>
+      
+      </ion-card>
+      <br>
+    
+      <button ion-button block color="info" (click)="incProd()">Cadastrar</button>    
+
+</ion-content>

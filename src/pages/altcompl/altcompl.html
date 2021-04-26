@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="base">
+      <ion-title>Alterar Amarração {{this.codprod}}</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="close()">
+            <ion-icon name="close">
+            </ion-icon>
+          </button>
+        </ion-buttons>          
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+        <ion-content>
+
+              <ion-item>
+                <ion-label stacked>Descrição</ion-label>
+                <ion-input type="text" readonly value="{{this.descprod}}" readonly></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label stacked>Codigo no Fornecedor</ion-label>
+                <ion-input type="text" [(ngModel)]="prodfor" value="{{this.prodfor}}"></ion-input>
+              </ion-item>                 
+                   
+          </ion-content>
+
+  </ion-content>
+  
+  <ion-footer>
+      <ion-toolbar color="base">
+        <button ion-button block color="info" (click)="altCompl()" >Alterar Amarração</button>
+      </ion-toolbar>
+    </ion-footer>
+  

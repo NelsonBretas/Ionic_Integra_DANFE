@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>{{this.codprod}}</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="close()">
+          <ion-icon name="close">
+          </ion-icon>
+        </button>
+      </ion-buttons>          
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="modelo">
+          <ion-segment-button value="dados">
+            Dados
+          </ion-segment-button>
+          <ion-segment-button value="fornecedoreslista">
+            Fornecedores
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>  
+
+
+      <ion-content>
+          <div [ngSwitch]="modelo">
+            <ion-list *ngSwitchCase="'dados'">
+
+
+                  <ion-item>
+                    <ion-label stacked>Descrição</ion-label>
+                    <ion-input type="text" readonly value="{{this.descricao}}" readonly></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label stacked>Codigo no Fornecedor</ion-label>
+                    <ion-input type="text" readonly value="{{this.prodfor1}}" readonly></ion-input>
+                  </ion-item>                  
+
+            </ion-list>
+        
+            <ion-list *ngSwitchCase="'fornecedoreslista'">
+
+                  <ion-item *ngFor="let fornecedores of lista_produtos" >
+
+                      <ion-card color="info">
+                          <ion-card-header>
+                              <span>Código/Loja : {{fornecedores.codforn}} / {{ fornecedores.lojafor}}</span>
+                          </ion-card-header>
+                          <ion-card-content>
+                            <b>Razão:</b><br>
+                            <span text-wrap>{{fornecedores.nome}}</span>
+                            <span><b>CNPJ/CPF:</b> {{fornecedores.cnpj}}</span><br>
+                            <span><b>Produto:</b> {{fornecedores.prodfor2}}</span><br>
+                          </ion-card-content>
+                      </ion-card>                    
+          
+                      <!--<ion-label stacked>Nome Fornecedor</ion-label>
+                      <ion-input type="text" readonly value="{{fornecedores.nome}}" readonly></ion-input>
+                      -->
+            
+                  </ion-item>
+            </ion-list>
+                 
+          </div>
+        </ion-content>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="base">
+    <button ion-button block color="info" (click)="openMenu()" >Opções</button>
+  </ion-toolbar>
+</ion-footer>

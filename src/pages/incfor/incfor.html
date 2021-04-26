@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>Inclusão de Fornecedores</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="close()">
+          <ion-icon name="close">
+          </ion-icon>
+        </button>
+      </ion-buttons>          
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-card color="base">
+
+
+      
+        <ion-card-content>
+
+          <ion-item>
+            <ion-label stacked>CNPJ/CPF</ion-label>
+            <ion-input type="number" (ionBlur)="buscaDados()" [(ngModel)]="cnpj" value="{{this.cnpj}}"></ion-input>
+          </ion-item>          
+    
+          <ion-item>
+            <ion-label stacked>Razão Social</ion-label>
+            <ion-input type="text" [(ngModel)]="nome" value="{{this.nome}}"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label stacked>Nome Fantasia</ion-label>
+            <ion-input type="text" [(ngModel)]="nreduz" value="{{this.nreduz}}"></ion-input>
+          </ion-item>                  
+          
+          <ion-item>
+            <ion-label stacked>Endereço</ion-label>
+            <ion-input type="text" [(ngModel)]="endereco" value="{{this.endereco}}"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label stacked>Complemento</ion-label>
+            <ion-input type="text" [(ngModel)]="complemento" value="{{this.complemento}}"></ion-input>
+          </ion-item>          
+      
+          <ion-item>
+            <ion-label stacked>Bairro</ion-label>
+            <ion-input type="text" [(ngModel)]="bairro" value="{{this.bairro}}"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label stacked>Estado</ion-label>
+            <ion-input type="text" [(ngModel)]="estado" (click)="showEstado()" readonly value="{{this.estado}}"></ion-input>
+          </ion-item>    
+      
+          <ion-item>
+            <ion-label stacked>Município</ion-label>
+            <ion-input type="text" [(ngModel)]="municipio" value="{{this.municipio}}"></ion-input>
+          </ion-item>    
+      
+          <ion-item>
+            <ion-label stacked>Cep</ion-label>
+            <ion-input type="text" [(ngModel)]="cep" value="{{this.cep}}"></ion-input>
+          </ion-item>        
+      
+          <ion-item>
+            <ion-label stacked>Tipo</ion-label>
+            <ion-input type="text" [(ngModel)]="tipofor" (click)="showTipo()"  readonly value="{{this.tipofor}}"></ion-input>
+          </ion-item>        
+
+          <ion-item>
+            <ion-label stacked>Telefone</ion-label>
+            <ion-input type="text" [(ngModel)]="telefone" value="{{this.telefone}}"></ion-input>
+          </ion-item>                      
+
+          <ion-item>
+            <ion-label stacked>Inscrição Estadual</ion-label>
+            <ion-input type="text" [(ngModel)]="ie" value="{{this.ie}}"></ion-input>
+          </ion-item>                      
+
+          <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="email" value="{{this.email}}"></ion-input>
+          </ion-item>            
+
+    
+        </ion-card-content>
+      
+      </ion-card>
+      <br>
+    
+      <button ion-button block color="info" (click)="incFor()">Cadastrar</button>    
+
+</ion-content>

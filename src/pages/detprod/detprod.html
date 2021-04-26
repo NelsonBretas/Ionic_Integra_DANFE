@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-navbar color="base">
+    <ion-title>{{this.codprod}}</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="close()">
+          <ion-icon name="close">
+          </ion-icon>
+        </button>
+      </ion-buttons>          
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="modelo">
+          <ion-segment-button value="dados">
+            Dados
+          </ion-segment-button>
+          <ion-segment-button value="saldos">
+            Saldos
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>  
+
+
+      <ion-content>
+          <div [ngSwitch]="modelo">
+            <ion-list *ngSwitchCase="'dados'">
+
+
+                  <ion-item>
+                    <ion-label stacked>Descrição</ion-label>
+                    <ion-input type="text" readonly value="{{this.descprod}}" readonly></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label stacked>Armazem</ion-label>
+                    <ion-input type="text" readonly value="{{this.armazem}}" readonly></ion-input>
+                  </ion-item>                  
+                  
+                  <ion-item>
+                    <ion-label stacked>NCM</ion-label>
+                    <ion-input type="text" readonly value="{{this.ncm}}"></ion-input>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label stacked>Tipo</ion-label>
+                    <ion-input type="text" readonly value="{{this.tipo}}"></ion-input>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label stacked>Unidade</ion-label>
+                    <ion-input type="text" readonly value="{{this.unidade}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Conta Contábil</ion-label>
+                    <ion-input type="text" readonly value="{{this.conta}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Centro de Custo</ion-label>
+                    <ion-input type="text" readonly value="{{this.cc}}"></ion-input>
+                  </ion-item>        
+              
+                  <ion-item>
+                    <ion-label stacked>Origem</ion-label>
+                    <ion-input type="text" readonly value="{{this.origem}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Grupo</ion-label>
+                    <ion-input type="text" readonly value="{{this.grupo}}"></ion-input>
+                  </ion-item>    
+
+            </ion-list>
+        
+            <ion-list *ngSwitchCase="'saldos'">
+
+                <ion-item>
+                    <ion-label stacked>Quantidade Atual</ion-label>
+                    <ion-input type="text" readonly value="{{this.qatu}}" readonly></ion-input>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label stacked>Saldo Atual em R$</ion-label>
+                    <ion-input type="text" readonly value="{{this.vatu}}"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label stacked>Valor Unitário</ion-label>
+                    <ion-input type="text" readonly value="{{this.unitario}}"></ion-input>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label stacked>Quantidade Empenhada</ion-label>
+                    <ion-input type="text" readonly value="{{this.empenho}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Saldo Não Endereçado</ion-label>
+                    <ion-input type="text" readonly value="{{this.naoend}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Quantidade em Pedido de Venda</ion-label>
+                    <ion-input type="text" readonly value="{{this.pedidov}}"></ion-input>
+                  </ion-item>        
+              
+                  <ion-item>
+                    <ion-label stacked>Quantidade a Entrar</ion-label>
+                    <ion-input type="text" readonly value="{{this.qentrar}}"></ion-input>
+                  </ion-item>    
+              
+                  <ion-item>
+                    <ion-label stacked>Meu Saldo em Poder de Terceiros</ion-label>
+                    <ion-input type="text" readonly value="{{this.meu3}}"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label stacked>Saldo de Terceiros</ion-label>
+                    <ion-input type="text" readonly value="{{this.saldo3}}"></ion-input>
+                  </ion-item>                  
+
+                  <ion-item>
+                    <ion-label stacked>Quantidade em Solicitações ao Armazém</ion-label>
+                    <ion-input type="text" readonly value="{{this.qsa}}"></ion-input>
+                  </ion-item>                        
+
+                  <ion-item>
+                    <ion-label stacked>Quantidade em Ordens de Produção</ion-label>
+                    <ion-input type="text" readonly value="{{this.qop}}"></ion-input>
+                  </ion-item>                        
+
+
+            </ion-list>
+                 
+          </div>
+        </ion-content>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="base">
+    <button ion-button block color="info" (click)="openMenu()" >Opções</button>
+  </ion-toolbar>
+</ion-footer>
